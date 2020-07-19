@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../../../style.css">
+<script type="text/javascript" src="../../../js/config.js"></script>
+<script type="text/javascript" src="../../../js/config_set.js"></script>
+<script type="text/javascript" src="../../../js/js.cookie.js"></script>
+<script type="text/javascript" src="../../../js/nightMode.js"></script>
+<script type="text/javascript" src="../../../js/characterNameChanger.js"></script>
+<script type="text/javascript" src="para_list_set.js"></script>
+
+<title>ログ</title><!--ここも作れるね-->
+</head>
+
+<body>
+<div id="all">
+
+<header><!-- ヘッダー-->
+	<p id="top_explain_text"></p>
+	<div id="head_top" class="flexbox">
+		<div id="humburger_menu_icon" onclick="openMenu()"><div></div><div></div><div></div>menu</div>
+		<a href="" id="site_title_logo"></a>
+		<div id="icon_set">
+			<a href="" id="mail"><div></div></a>
+			<a id="night" onclick="nightMode.changeMode()"></a>
+		</div>
+	</div>
+
+	<div id="head_menu" class="flexbox">
+		<div id="close_menu" onclick="closeMenu()">×</div>
+	</div>
+
+	<!--トップ画像-->
+	<img id="top_image" src="" alt="top_image">
+</header>
+
+<main>
+	<!--パンくずリスト(SEO対策をする場合はご自身で記述)-->
+	<div id="bread"></div>
+
+	<!--前へ　次へ　のある場所に設置-->
+	<div class="flexbox next_prev_move">
+		<a onclick="movePara(this,-1)"><script language="JavaScript">document.write(configSet.movePrev);</script></a>
+		<a href="index.html"><script language="JavaScript">document.write(configSet.moveMenu);</script></a>
+		<a onclick="movePara(this,1)"><script language="JavaScript">document.write(configSet.moveNext);</script></a>
+	</div>
+
+	<!--ユーザが操作してもよい領域ここから-->
+	<div id="user_change">
+
+		<h2></h2>
+		<p id="images_explain"></p>
+		<div id="auto_images"></div>
+		<div id="novel_text"></div>
+
+	</div>
+	<!--ここまで-->
+
+	<div id="access_counter"></div>
+
+	<!--前へ　次へ　のある場所に設置-->
+	<div class="flexbox next_prev_move">
+		<a onclick="movePara(this,-1)"><script language="JavaScript">document.write(configSet.movePrev);</script></a>
+		<a href="index.html"><script language="JavaScript">document.write(configSet.moveMenu);</script></a>
+		<a onclick="movePara(this,1)"><script language="JavaScript">document.write(configSet.moveNext);</script></a>
+	</div>
+
+</main>
+
+<footer>
+	<div id="foot_link"></div><!--ポリシーとかそういうの置いとく-->
+	<div id="copy_right"><script language="JavaScript">document.write(configSet.copyright);</script></div>
+</footer>
+
+</div>
+
+<a id="go_pagetop" href="#all">&#9650; TOP</a>
+</body>
+
+</html>

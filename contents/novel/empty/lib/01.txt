@@ -1,0 +1,5 @@
+﻿小説サンプル
+
+小説サンプルです
+
+<span style="color:red;">HTMLタグを仕込むこともできます</span>
