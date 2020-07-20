@@ -1,0 +1,11 @@
+【検索除けを使用する】
+各フォルダのindex.htmlファイル6行目に
+<meta name="robots" content="noindex,nofollow,noarchive">
+を書く
+robots.txtを作成する
+
+【検索除けを使用しない】
+各フォルダのindex.htmlファイル6行目の
+<meta name="robots" content="noindex,nofollow,noarchive">
+を消す
+robots.txtを消去する
