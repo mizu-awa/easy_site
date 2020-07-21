@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- 標準取り込みjsファイル -->
+<script type="text/javascript" src="js/config.js"></script>
+<script type="text/javascript" src="js/config_set.js"></script>
+<script type="text/javascript" src="js/js.cookie.js"></script>
+<script type="text/javascript" src="js/nightMode.js"></script>
+
+<!-- 追加取り込みjsファイル -->
+<script type="text/javascript" src="data/main_menu_set.js"></script>
+<script type="text/javascript" src="data/main_image_menu_set.js"></script>
+<script type="text/javascript" src="data/main_image_text_menu_set.js"></script>
+<script type="text/javascript" src="data/read_tables_config.js"></script>
+
+<title>トップページ</title>
+</head>
+
+<body>
+<div id="all">
+
+<header><!-- ヘッダー-->
+	<p id="top_explain_text"></p>
+	<div id="head_top" class="flexbox">
+		<div id="humburger_menu_icon" onclick="openMenu()"><div></div><div></div><div></div>menu</div>
+		<a href="" id="site_title_logo"></a>
+		<div id="icon_set">
+			<a href="" id="mail"><div></div></a>
+			<a id="night" onclick="nightMode.changeMode()"></a>
+		</div>
+	</div>
+
+	<div id="head_menu" class="flexbox">
+		<div id="close_menu" onclick="closeMenu()">×</div>
+	</div>
+
+	<!--トップ画像-->
+	<img id="top_image" src="" alt="top_image">
+</header>
+
+<main>
+	<!--パンくずリスト(SEO対策をする場合はご自身で記述)-->
+	<div id="bread"></div>
+
+	<!--ユーザが操作してもよい領域ここから-->
+	<div id="user_change">
+		<h2>ページタイトル</h2>
+
+		<h3>サブタイトル</h3>
+		<div>内容を記入</div>
+
+		<h3>メニュー</h3>
+		<div class="main_menu"></div>
+
+		<h3>画像メニュー</h3>
+		<div class="main_image_menu flexbox"></div>
+
+		<h3>画像+テキストメニュー</h3>
+		<div class="main_image_text_menu flexbox"></div>
+		
+		<div class="accordion_menu">
+			<input type="checkbox" id="accordion_box_1">
+			<label for="accordion_box_1"><h3>アコーディオンメニュー</h3></label>
+			<div>labelタグ以下のコンテンツは</div>
+			<p>すべて折りたたまれます</p>
+		</div>
+
+		<h3>ボーダー付き表</h3>
+		<table class="auto_tables"></table>
+
+		<h3>ボーダー無し表</h3>
+		<table class="auto_tables"></table>
+
+		<h3>更新履歴用窓</h3>
+		<div id="site_history">
+			<h3>更新履歴</h3>
+			<p>
+			</p>
+		</div>
+		
+
+	</div>
+	<!--ここまで-->
+
+	<div id="access_counter"></div>
+
+</main>
+
+<footer>
+	<div id="foot_link"></div><!--ポリシーとかそういうの置いとく-->
+	<div id="copy_right"><script language="JavaScript">document.write(configSet.copyright);</script></div>
+</footer>
+
+</div>
+
+<a id="go_pagetop" href="#all">&#9650; TOP</a>
+</body>
+
+</html>
