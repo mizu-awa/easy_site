@@ -7,17 +7,24 @@ if exist ..\..\substance (
 	echo クッションページを削除します。
 	rem クッションページ（index.html)を削除する
 	del ..\..\index.html
-	rem substanceフォルダの中身をすべてrootに移動
+	rem substanceフォルダの中身をすべてrootにコピー
 	xcopy /e ..\..\substance ..\..\
-	rem 中身の空になったsubstanceフォルダを消去
-	del ..\..\sucstance
+	rem substanceフォルダを消去
+	rmdir /s ..\..\substance
 ) else (
 	rem substanceフォルダが存在していない場合
 	echo クッションページを作成します。
 	rem substanceフォルダを作成する
 	mkdir ..\..\substance
-	rem rootの中身（substance robot.txt以外）をsubstanceフォルダに移動する
-	xcopy /e ..\..\ ..\..\substance
+	rem rootの中身（substance robot.txt easy_update以外）をsubstanceフォルダにコピーする
+	xcopy /e ..\..\ ..\..\substance /EXCLUDE: ..\data\xcopy-excludelist.txt
+	rem 残ったファイル・フォルダを削除(ユーザが追加したフォルダがあった場合使えないが…)
+	rmdir /s ..\..\contents
+	rmdir /s ..\..\data
+	rmdir /s ..\..\img
+	rmdir /s ..\..\js
+	del ..\..\index.html
+	del ..\..\style.css
 	rem index.htmlを作成
-	move ..\data\index.html ..\..\
+	copy ..\data\index.html ..\..\index.html
 )
