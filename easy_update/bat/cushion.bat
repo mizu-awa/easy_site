@@ -8,7 +8,12 @@ if exist ..\..\substance (
 	rem クッションページ（index.html)を削除する
 	del ..\..\index.html
 	rem substanceフォルダの中身をすべてrootにコピー
-	xcopy /e ..\..\substance ..\..\
+	xcopy /e ..\..\substance\contents ..\..\contents
+	xcopy /e ..\..\substance\data ..\..\data
+	xcopy /e ..\..\substance\img ..\..\img
+	xcopy /e ..\..\substance\js ..\..\js
+	copy ..\..\substance\index.html ..\..\index.html
+	copy ..\..\substance\style.css ..\..\style.css
 	rem substanceフォルダを消去
 	rmdir /s /q ..\..\substance
 ) else (
@@ -16,9 +21,14 @@ if exist ..\..\substance (
 	echo クッションページを作成します。
 	rem substanceフォルダを作成する
 	mkdir ..\..\substance
-	echo rootの中身（substance robot.txt easy_update以外）をsubstanceフォルダにコピーする
-	xcopy /e /EXCLUDE: ..\data\xcopy-excludelist.txt ..\..\ ..\..\substance
-	echo 残ったファイル・フォルダを削除(ユーザが追加したフォルダがあった場合使えないが…)
+	rem rootの中身（substance robot.txt easy_update以外）をsubstanceフォルダにコピーする
+	xcopy /e ..\..\contents ..\..\substance\contents
+	xcopy /e ..\..\data ..\..\substance\data
+	xcopy /e ..\..\img ..\..\substance\img
+	xcopy /e ..\..\js ..\..\substance\js
+	copy ..\..\index.html ..\..\substance\index.html
+	copy ..\..\style.css ..\..\substance\style.css
+	rem 残ったファイル・フォルダを削除
 	rmdir /s /q ..\..\contents
 	rmdir /s /q ..\..\data
 	rmdir /s /q ..\..\img

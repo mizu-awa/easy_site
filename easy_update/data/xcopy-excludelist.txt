@@ -1,3 +1,0 @@
-..\..\substance
-..\..\robots.txt
-..\..\easy_update
