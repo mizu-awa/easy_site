@@ -8,10 +8,10 @@ if exist ..\..\substance (
 	rem クッションページ（index.html)を削除する
 	del ..\..\index.html
 	rem substanceフォルダの中身をすべてrootにコピー
-	xcopy /e ..\..\substance\contents ..\..\contents
-	xcopy /e ..\..\substance\data ..\..\data
-	xcopy /e ..\..\substance\img ..\..\img
-	xcopy /e ..\..\substance\js ..\..\js
+	echo D | xcopy /e ..\..\substance\contents ..\..\contents
+	echo D | xcopy /e ..\..\substance\data ..\..\data
+	echo D | xcopy /e ..\..\substance\img ..\..\img
+	echo D | xcopy /e ..\..\substance\js ..\..\js
 	copy ..\..\substance\index.html ..\..\index.html
 	copy ..\..\substance\style.css ..\..\style.css
 	rem substanceフォルダを消去
@@ -22,10 +22,10 @@ if exist ..\..\substance (
 	rem substanceフォルダを作成する
 	mkdir ..\..\substance
 	rem rootの中身（substance robot.txt easy_update以外）をsubstanceフォルダにコピーする
-	xcopy /e ..\..\contents ..\..\substance\contents
-	xcopy /e ..\..\data ..\..\substance\data
-	xcopy /e ..\..\img ..\..\substance\img
-	xcopy /e ..\..\js ..\..\substance\js
+	echo D | xcopy /e ..\..\contents ..\..\substance\contents
+	echo D | xcopy /e ..\..\data ..\..\substance\data
+	echo D | xcopy /e ..\..\img ..\..\substance\img
+	echo D | xcopy /e ..\..\js ..\..\substance\js
 	copy ..\..\index.html ..\..\substance\index.html
 	copy ..\..\style.css ..\..\substance\style.css
 	rem 残ったファイル・フォルダを削除
