@@ -38,3 +38,5 @@ if exist ..\..\substance (
 	echo index.html‚ğì¬
 	copy ..\data\index.html ..\..\index.html
 )
+
+exit
